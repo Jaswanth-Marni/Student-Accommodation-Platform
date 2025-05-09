@@ -1,0 +1,104 @@
+@layer components {
+  /* Light theme styles - Updated with exact specs */
+  .light-theme {
+    background: var(--light-background);
+  }
+  
+  .light-glassmorphic {
+    @apply backdrop-blur-xl border border-white/30 shadow-glass;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .light-text-primary {
+    @apply text-white;
+  }
+  
+  .light-text-secondary {
+    color: #D1C4E9;
+  }
+  
+  .light-accent-cyan {
+    color: #40C4FF;
+  }
+  
+  .light-accent-pink {
+    color: #FF4081;
+  }
+  
+  /* Dark theme styles - Updated with exact specs */
+  .dark-theme {
+    background: var(--dark-background);
+  }
+  
+  .dark-glassmorphic {
+    @apply backdrop-blur-xl border border-white/20 shadow-glass-dark;
+    background: rgba(15, 15, 20, 0.6);
+  }
+  
+  .dark-text-primary {
+    color: #EDE7F6;
+  }
+  
+  .dark-text-secondary {
+    color: #B39DDB;
+  }
+  
+  .dark-accent {
+    color: #40C4FF;
+  }
+
+  /* Shadow utilities */
+  .shadow-glass {
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  }
+  
+  .shadow-glass-dark {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Button ripple effect */
+  .button-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button-ripple::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    transform: scale(0);
+    animation: ripple 0.8s ease-out;
+  }
+
+  .dark .button-ripple::after {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Tab Content Transition */
+  .tab-transition-enter {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .tab-transition-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 200ms;
+  }
+  
+  .tab-transition-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .tab-transition-exit-active {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 200ms, transform 200ms;
+  }
+}
