@@ -2,7 +2,7 @@
 
 DormEase is a full-stack web application for managing student dormitories, including room allocation, student profiles, maintenance requests, and more.
 
----
+----
 
 ## Table of Contents
 - [Project Overview](#project-overview)
